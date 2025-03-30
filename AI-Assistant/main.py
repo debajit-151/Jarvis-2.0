@@ -114,8 +114,8 @@ def wish():
 
 
 class MainThread(QThread):
-    def __init__(self):
-        super(MainThread, self).__init__()
+    def _init_(self):
+        super(MainThread, self)._init_()
 
     def run(self):
         self.TaskExecution()
@@ -374,8 +374,8 @@ class Main(QMainWindow):
         self.ui.pushButton.clicked.connect(self.startTask)
         self.ui.pushButton_2.clicked.connect(self.close)
 
-    def __del__(self):
-        sys.stdout = sys.__stdout__
+    def _del_(self):
+        sys.stdout = sys._stdout_
 
     def startTask(self):
         self.ui.movie = QtGui.QMovie("Jarvis/utils/images/live_wallpaper.gif")
